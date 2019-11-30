@@ -1,6 +1,17 @@
 <!DOCTYPE html>
  <!-- Team A / Supreme Court Twitter -->
 
+ <!-- Login/Logout -->
+
+{% block content %}
+
+<p><a class="waves-effect waves-light btn" href="{% url 'login' %}">Login</a>
+<a class="waves-effect waves-light btn" href="{% url 'logout' %}">Logout</a>
+<a class="waves-effect waves-light btn" href="{% url 'signup' %}">Sign up</a></p>
+
+
+{% endblock %} 
+
 <html>
 <title>SCOTUS Tweet Database</title>
 <meta charset="UTF-8">
@@ -21,6 +32,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <!-- Header -->
   <header id="portfolio">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
     <div class="w3-container">
     <h1><b>SCOTUS Tweet Database</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
@@ -47,127 +66,330 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </header>
   
-  <!-- First Tweet Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <div class="w3-container w3-white">
-        <p><b>Username</b></p>
-        <p>Sample tweet text. #sample #tweet </p>
-      </div>
+<!-- First Tweet Grid-->
+<!-- First Tweet-->
+
+<div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">I am Tweet<i class="material-icons right">more_vert</i></span>
+      <p>Username</p>
     </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <div class="w3-container w3-white">
-        <p><b>Username</b></p>
-        <p>Sample tweet text. #sample #tweet </p>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
       </div>
-    </div>
-    <div class="w3-third w3-container">
-      <div class="w3-container w3-white">
-        <p><b>Username</b></p>
-        <p>Sample tweet text. #sample #tweet </p>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
       </div>
     </div>
   </div>
+<!-- Second-->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Third -->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   
   <!-- Second tweet Grid-->
-  <div class="w3-row-padding">
-        <div class="w3-third w3-container w3-margin-bottom">
-          <div class="w3-container w3-white">
-            <p><b>Username</b></p>
-            <p>Sample tweet text. #sample #tweet </p>
-          </div>
-        </div>
-        <div class="w3-third w3-container w3-margin-bottom">
-          <div class="w3-container w3-white">
-            <p><b>Username</b></p>
-            <p>Sample tweet text. #sample #tweet </p>
-          </div>
-        </div>
-        <div class="w3-third w3-container">
-          <div class="w3-container w3-white">
-            <p><b>Username</b></p>
-            <p>Sample tweet text. #sample #tweet </p>
-            </div>
+  <!-- First -->
+<div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
     </div>
-</div>
-
-    <!-- Third tweet Grid-->
-    <div class="w3-row-padding">
-            <div class="w3-third w3-container w3-margin-bottom">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-              </div>
-            </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-              </div>
-            </div>
-            <div class="w3-third w3-container">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-                </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
         </div>
-    </div>
-
-    <!-- Fourth tweet Grid-->
-    <div class="w3-row-padding">
-            <div class="w3-third w3-container w3-margin-bottom">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-              </div>
-            </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-              </div>
-            </div>
-            <div class="w3-third w3-container">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-                </div>
-        </div>
-    </div>
-
-    <!-- Fifth tweet Grid-->
-    <div class="w3-row-padding">
-            <div class="w3-third w3-container w3-margin-bottom">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-              </div>
-            </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-              </div>
-            </div>
-            <div class="w3-third w3-container">
-              <div class="w3-container w3-white">
-                <p><b>Username</b></p>
-                <p>Sample tweet text. #sample #tweet </p>
-                </div>
-        </div>
-    </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      </div>
     </div>
   </div>
+<!-- Second-->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Third -->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Third tweet Grid-->
+  <!-- First -->
+<div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Second-->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Third -->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Fourth tweet Grid-->
+  <!-- First -->
+<div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Second-->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Third -->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Fifth tweet Grid-->
+  <!-- First -->
+<div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Second-->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Third -->
+  <div class="row">
+    <div class="col s3 m4">
+      <div class="card">
+        <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Username<i class="material-icons right">more_vert</i></span>
+      <p>I am Tweet</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Username<i class="material-icons right">close</i></span>
+      
+      <div class="card-content">
+        <p><a href="#">This is a link to the Tweet</a></p>
+      </div>
+        <div class="card-action">
+          <a href="#">Favorites</a><a href="#">Retweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <ul class="pagination">
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
 
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
     <p>
